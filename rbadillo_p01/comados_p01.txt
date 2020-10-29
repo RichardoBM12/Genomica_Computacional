@@ -1,0 +1,40 @@
+cd Escritorio
+mkdir GenomicaComputacional && mkdir GenomicaComputacional/rbadillo_p01
+cd GenomicaComputacional/rbadillo_p01/
+touch comandos_p01.md
+subl comandos_p01.md
+echo $0
+echo $SHELL
+mkdir data filtered raw_data meta scripts figures archive
+mv filtered data/ && mv raw_data data/
+cd scripts/
+touch delay.sh
+subl delay.sh
+which bash
+ls -1
+chmod a+x delay.sh
+ls -1
+./delay.sh
+./delay.sh &
+htop
+kill 3742
+cd ..
+touch meta/SarsCov-2.txt
+subl meta/SarsCov-2.txt
+cd
+cd Descargas
+mv sequence.fasta sarscov2_genome.fasta
+mv sequence.gff3 sarscov2_genome.gff3
+mv sequence.fasta splike_c.faa
+mv sequence\(1\).fasta splike_b.faa
+mv sequence\(2\).fasta splike_a.faa
+cd
+touch Escritorio/GenomicaComputacional/rbadillo_p01/meta/SarsCov-2_Spike.txt
+subl Escritorio/GenomicaComputacional/rbadillo_p01/meta/SarsCov-2_Spike.txt
+cd
+mv Descargas/SRR10971381_R1.fastq.gz Descargas/SRR10971381_R2.fastq.gz Descargas/sarscov2_assembly.fasta.gz Descargas/splike_a.faa Descargas/splike_b.faa Descargas/splike_c.faa Descargas/sarscov2_genome.fasta Descargas/sarscov2_genome.gff3 Escritorio/GenomicaComputacional/rbadillo_p01/data/raw_data
+
+cd Escritorio/GenomicaComputacional/rbadillo_p01/data/filtered
+ln -s /home/ricardo/Escritorio/GenomicaComputacional/rbadillo_p01/data/raw_data/splike_c.faa
+ln -s /home/ricardo/Escritorio/GenomicaComputacional/rbadillo_p01/data/raw_data/splike_b.faa
+ln -s /home/ricardo/Escritorio/GenomicaComputacional/rbadillo_p01/data/raw_data/splike_a.faa

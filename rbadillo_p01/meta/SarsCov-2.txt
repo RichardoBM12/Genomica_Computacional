@@ -1,0 +1,8 @@
+Estructura del coronavirus SARS-COV 2 y su relevancia.
+Los coronavirus producen enfermedades del tracto respiratorio, gastrointestinales y del Sistema Nervioso, el coronavirus tiene 3 genéros los alfa coronavirus, los beta coronavirus que afectan a mamimeros , los gamma coronavirus que afectan a las aves y delta coronavirus que afecta a ambos.
+El coronavirus tuvo un origen en los murciélagos brinco a un hospedero intermedio y de ahi salto al ser humano. Este virus esta constantemente mutando, no cambia tan radical, pero no todos los virus son iguales.
+Al utilizar la epidiomologia genomica, se encontro como fue viajando el virus, a quien infecto y su comportamiento al mutar.
+La estructura del SARS-CoV-2  es un virus de RNA de cadena sencilla positiva, enrollado en un nucleo capside y esta envuelto por una lipoproteína de membrana y tiene espiculas altamente glicosiladas  (Proteina S).
+La proteina S del SARS-CoV-2 se une a la enzima convertidora ded angiotensina 2 de las celulas humanas. La molecula se encuentra en los tejidos nervisoso, respiratorio y gastrico.
+Al tener la anatomia molecular se pueden desarrollar, anticuerpos, peptidos o moleculas para bloquear ese receptor, o generar vacunas.
+El desarrollo de vacunas son largas, complicadas y costosas.
