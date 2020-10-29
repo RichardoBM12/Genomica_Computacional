@@ -96,6 +96,70 @@ cat splike_a.faa > glycoproteins.faa  && cat splike_b.faa >> glycoproteins.faa  
 **Respuesta 5:**
 mv data/raw_data/splike_c.faa data/raw_data/splike_b.faa data/raw_data/splike_a.faa archive/
 Se rompieron las ligas simbolicas suaves
+zless sarscov2_assembly.fasta.gz
+zless SRR10971381_R1.fastq.gz
+zless SRR10971381_R2.fastq.gz
 
 **Respuesta 6:**
+cat sarscov2_genome.fasta
+zcat sarscov2_assembly.fasta.gz
+
+head -3  sarscov2_genome.fasta 
+>NC_045512.2 Severe acute respiratory syndrome coronavirus 2 isolate Wuhan-Hu-1, complete genome
+ATTAAAGGTTTATACCTTCCCAGGTAACAAACCAACCAACTTTCGATCTCTTGTAGATCTGTTCTCTAAA
+CGAACTTTAAAATCTGTGTGGCTGTCACTCGGCTGCATGCTTAGTGCACTCACGCAGTATAATTAATAAC
+zcat sarscov2_assembly.fasta.gz | head -3
+
+>NODE_1_length_264_cov_161.042781
+CACAAATCTTAACACTCTTCCCTACACGACGCTCTTCCGATCTACGCCGGGCCATTCGTA
+CGAACCGATACCTGTGGTAAAGGGTCCTACTGTATGGTGGTACACGAGTAGTAGCAAATG
+
+Por mientras el archivo sarscov2_genome.fasta describe el genoma del virus, el sarsvoc2_assembly.fasta.gaz describe el genoma del virus.
+
+**Respuesta 7:**
+grep -o \> sarscov2_genome.fasta | wc -l 
+1
+zcat sarscov2_assembly.fasta.gz | grep -o \> | wc -l 
+35
+
+**Respuesta 8:**
+zcat SRR10971381_R2.fastq.gz  | head -12
+@SRR10971381.512_2
+CGTGGAGTATGGCTACATACTACTTATTTGATGAGTCTGGTGAGTTTAAAGTGGCTTCACATATGTATTGTTCTTTCTACCCTCCAGATGAGGATGAAGAAGAAGGTGATTGTGAAGAAGAAGAGTTTGAGCCATCAACTCAATATGAGT
++
+/FFFA/A/FFFF66FFFFFF/FF/FFFFFFFFFFFFF/AFFF6FFFA6FFFFF/FFFFFFFFFFFFFFFFFF/FF/FFFFFA/FFF/FFF/A/AFA/FFFFF/=F/F/F/AFAFF//A/AFF//FFAF/FFF=FFAFFFA/A/6=///==
+@SRR10971381.556_2
+TTTGTAAAAATAAAATAAAAAAAATAAAAATAATATATTAAAAAAAGATAAATAAAAAAATGAACAATTAATAAAAAAAAAAAAAAAAAAAAATTAAAAAAAAAAAAAAAAAAAATAAAAAAAAAAAAAAATAAAAAAAAAATTATAAAA
++
+6AFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF/FFFAFFFFFF/FFA/FF=F//=FF/FFFFFFFFFFFFFA/FFFF/FF/FA//F/FFFFFFA/=FFFFF/FFFF/F=FFFAFF///FFFFA/FF/6//////=/
+@SRR10971381.1428_2
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
++
+FFFFFFFFFFFFAFFFAFFFFFF6A//F//FFF
+
+El caracter que me puede ayudar a obtener el conteo de secuencias es @.
+
+zless SRR10971381_R2.fastq.gz | grep @ | wc -l
+
+130022
+
+**Respuesta 9:**
+Tanto los archivos .faa como los .fasta contienen cadenas/secuencias que hacen referencia a nucleótidos, mientras que los .faa contienen cadenas/secuencias que hacen referencia a aminoácidos. Por otro lado, los archivos .fastq hacen referencia a cadenas de nucleótidos y sus puntuaciones de calidad correspondientes (por cada cadena de nucleótidos).
+
+Los archivos .fasta contiene secuencias que hacen referencia a nucleotidos, los .faa contiene secuencias que hacen referencia a aminoácidos. Los archivos .fastq hacen referencia a secuencias de nucleotidos y a puntuaciones de calidad.
+
+**Respuesta 10**
+
+less presenta la información bastante caotica, provocando que la información sea bastante complicado de entender, y dificil moverse por la misma. Debido a que muestra a linea entera y cuando sobrepasa aparece en la linea aparte.
+
+less -S agrupa la información de forma ordenada, provocando que sea facil entender la información de la msima y facil moverse por la misma. Debido  a que permite la capacidad de navegar sin mostrar la información a parte.
+
+**Respuesta 11**
+cut -f 3 sarscov2_genome.gff3 | grep gene | wc -l
+11
+
+El campo 3 corresponde al tipo de caracteristica.
+
+CDS es una secuencia de codificación de proteinas.
+gene es una secuencia de codificaci´on del simbolo del gen primario.
 
